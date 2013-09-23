@@ -1,0 +1,685 @@
+body
+{
+	background-color:white;
+	color:black;
+	font-family:"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif
+}
+
+h1
+{
+	padding-top:5px;
+	margin-top:0;
+	line-height:1em;
+	font-size:4.6em;
+	margin:0em 0 0.3em 0;
+}
+
+a
+{
+	font-size:12px;
+	font-weight:700;
+	color:#333;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color:orange;
+}
+
+h3
+{
+font-size: 1em;
+margin: 0 0 1em 0;
+}
+
+ul
+{
+	list-style:none;
+}
+
+/* -------------------------------------------- */
+/* LAYOUT  */
+#wrapper
+{
+	width:70em;
+	margin:0 auto
+}
+
+#project-version-section{
+	display:none;
+	background-color:#fff;
+	margin:10px 0 10px 0;
+	padding-bottom:0px;
+	float:left;
+	width:100%;
+}
+
+.report-section, .planning-section
+{
+	display:none;
+	background-color:#fff;
+	margin:10px 0 10px 0;
+	padding-bottom:20px;
+	border-bottom:1px solid #eee;
+	float:left;
+	width:100%;
+}
+
+#report-wrapper
+{
+	display:none
+}
+
+.col-group > div{
+  width:50%;
+  float:left;
+}
+/* -------------------------------------------- 
+   HEADER                       
+   -------------------------------------------- */
+header
+{
+  padding-top:2em;
+}
+
+#project-version-section
+{
+	background-color:transparent;
+  position:relative;
+}
+#project-version-section select{
+  margin-right: 20px;
+}
+
+#logo{
+	width: 360px;
+	margin-bottom: 16px;
+}
+
+#projects{
+  display: block;
+}
+
+#top-right-nav{
+  float:right;
+  margin:5px;
+}
+
+#planning-link,#reports-link{
+  display: none;
+}
+
+#top-right-nav a{
+  float:right;
+  color:#eee;
+  font-size:0.8em;
+  padding: 2px 0 ;
+}
+
+#top-right-nav span{
+  float:right;
+  color:#eee;
+  padding:0 10px;
+}
+
+#top-right-nav a:hover{
+  color:orange;
+}
+
+/* -------------------------------------------- 
+   LOGIN                       
+   -------------------------------------------- */
+#login-section
+{
+	margin-top:0px
+}
+
+.error-alert{
+  background: #F4CDC6;
+  color: #7F5D5D;
+  border-radius: 3px;
+  padding:10px;
+  width:327px;
+  display:none;
+}
+
+#btn-login{
+  
+}
+
+#loginform
+{
+	padding-top:120px
+}
+
+#loginform.error{
+  padding-top:56px
+}
+
+#open-issues-by-tracker
+{
+	display:none;
+}
+
+.login-field input
+{
+	padding:10px 15px 10px 100px;
+	margin:0;
+	background-color:#FBFBFB;
+	border:1px solid #CCC;
+	width:230px;
+	font-size:18px;
+	position:relative;
+	z-index:2
+}
+
+input.error{
+  border: 1px solid red;
+}
+
+input
+{
+	border-width:1px;
+	border-style:solid;
+	border-color:#B4B4B4 #FEFEFE #FEFEFE #B4B4B4;
+	background-color:#F0F0F0
+}
+
+input,textarea,select
+{
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	font-size:1.1em;
+	color:#000;
+	padding:5px
+}
+
+#login-section input[type="submit"]
+{
+	min-width:160px;
+	height:45px;
+	font-weight:400;
+	margin:15px 0 30px;
+	font-size:16px;
+	line-height:16px;
+	background-color:#8C8987;
+	color:#fff!important;
+	border:1px solid #474747
+}
+
+.login-field
+{
+	position:relative
+}
+
+.above30
+{
+	margin-top:30px!important
+}
+
+.above-below15
+{
+	margin-top:15px!important;
+	margin-bottom:15px!important
+}
+
+.login-field label.placeholder
+{
+	position:absolute;
+	top:3px;
+	left:16px;
+	color:#CCC;
+	background:#FBFBFB;
+	z-index:5;
+	width:70px;
+	text-align:right
+}
+
+label
+{
+	display:block;
+	margin-top:10px;
+	font-size:13px;
+	font-weight:700;
+	color:#555;
+	text-transform:capitalize
+}
+
+#login-section fieldset legend
+{
+	display:none
+}
+
+#large-cartoon
+{
+	width:400px;
+	float:left;
+	height:420px;
+	background-repeat:no-repeat;
+	padding-right:60px;
+	margin-left: 30px;
+	position:relative;
+}
+
+.bunny1
+{
+	background:url(../img/bunny1.png)
+}
+
+.bunny-copyright{
+	font-size:10px;
+	position:absolute;
+	bottom:-10px;
+	font-style: italic;
+	color:#aaa;
+}
+.bunny-copyright > a{
+	font-size:10px;
+	font-style: italic;
+	color:#aaa;
+	font-weight: normal;
+}
+
+
+
+/* -------------------------------------------- 
+   PROJECT VERSION SELECTION                      
+   -------------------------------------------- */
+#version-status{
+	text-transform: capitalize;
+	font-weight: bold;
+  display: block;
+  position:absolute;
+  top:0;
+  right:0;
+  display: none;
+}
+
+#versions{
+  display:none;
+}
+
+#versions-nav{
+	margin-top:20px;
+	background-color:black;
+	padding:4px 5px 7px 10px;
+}
+#versions-nav{
+	display: none;
+}
+#versions-nav a{
+	margin-right:20px;
+	font-size:0.8em;
+	padding:5px;
+	color:gray;
+}
+#versions-nav a:hover{
+	color:orange
+}
+#versions-nav a.selected{
+	color:white;
+}
+
+/* -------------------------------------------- 
+   PIE GRAPHS                       
+   -------------------------------------------- */
+.btn-pie-chart
+{
+	text-decoration:none;
+	padding:8px;
+	line-height:13px;
+	font-size:1em;
+	color:#ddd;
+}
+
+.selected
+{
+	color:#444
+}
+
+.pie-chart-wrapper{
+	width:49%;
+	float:left;
+	clear:left;
+	margin-top:20px;
+}
+
+#paired-line-chart{
+	width:49%;
+	float:left;
+}
+
+#pie-selectors{
+	float: left;
+}
+
+.pie-chart-wrapper > .chart a{
+	cursor: pointer!important;
+}
+
+/* -------------------------------------------- 
+   ISSUES                     
+   -------------------------------------------- */
+
+  .issues{
+  	font-size:0.9em;
+  	width: 100%;
+  }
+  .issues th{
+    text-align: left;
+  }
+  .issues td{
+  	padding:  5px 5px ;
+    border-top: 1px solid #eee;
+  }
+  .issues > tbody > tr:hover{
+    background-color:#f5f5f5;
+  }
+  ul.issues{
+  	padding: 0;
+  	margin: 0;
+  	width: 100%;
+  }
+  ul.issues li{
+  	margin: 5px;
+  }
+
+  td.done-ratio-bar{
+  	position:relative;
+  	width:100px;
+    display: block;
+  }
+
+  span.done-ratio-bar{
+  	position:absolute;
+  	height:100%;
+  	top:0;
+  	left:0;
+  	background-color: orange;
+  }
+
+  th.sorted {
+
+  }
+
+
+  .issues th:hover:after {
+    color: orange!important;
+    content: "  \25B2";
+  }
+  .issues th:hover.sorted.descending:after {
+    color: orange!important;
+    content: "  \25BC";
+  }
+
+  th.sorted.ascending:after {
+    content: "  \25B2";
+    color:#ddd;
+  }
+
+  th.sorted.descending:after {
+    content: " \25BC";
+    color:#ddd;
+  }
+
+  .project-name, .version-name{
+  	font-weight: bold;
+  }
+
+  #no-issues-section > span{
+  	font-size:2em;
+  	color:#ddd;
+  }
+
+  #no-issues-section {
+  	text-align: center;
+  	padding: 100px 0 120px 0;
+  }
+
+  #error-section > span{
+  	font-size:2em;
+  	color: #E51837;
+  }
+  
+  #error-section {
+  	text-align: center;
+  	padding: 100px 0 120px 0;
+  }
+
+  #planning-issues-section {
+    position: relative;
+  }
+
+  #planning-issues-section .open{
+    background-color: #f9f7f4;
+  }
+
+  tr.closed{
+    display: none;
+  }
+
+  #planning-issues-section .open td{
+    border-top: 1px solid #ddd;
+    font-weight: bold;
+  }
+
+
+  #planning-issues-section tr{
+    cursor: pointer;
+  }
+
+  .issues > tbody > tr.desc:hover{
+    background-color: #f9f7f4;
+  }
+
+  #issues-comments-collapse-all{
+    display: none;
+  }
+
+  #issues-comments-expand-all, #issues-comments-collapse-all{
+    position: absolute;
+    top:0;
+    right:0;
+    color:#ddd;
+  }
+
+  .section-header{
+    position:relative;
+  }
+
+  .issues > tbody > tr.comments:hover{
+    background-color: white;
+  }
+
+  .issues .desc{
+    font-size:0.9em;
+    border-bottom:1px solid #d5d5d5;
+    background-color: #f9f7f4;
+  }
+  .issues .desc td{
+    border-top:none;
+    padding-bottom:10px;
+  }
+
+  .issues .comment{
+  }
+  .issue-comments{
+    font-size:0.8em;
+    padding-left:20px;
+    margin-top:0;
+    background-color: #F8F8F8;
+    margin: 0 20px;
+    -webkit-border-radius: 0 0 5px 5px;
+    padding-top: 8px;
+    border-bottom:1px solid #D5D5D5;
+    border-right:1px solid #D5D5D5;
+    border-left:1px solid #D5D5D5;
+  }
+
+  .comments td{
+    border-top:none;
+    padding:0;
+    padding-bottom: 20px;
+  }
+
+  .issue-comments .author{
+    font-weight:bold;
+  }
+
+  .issue-comments .comment-body{
+    padding:5px 10px 10px ;
+  }
+
+/* -------------------------------------------- 
+   BAR GRAPHS                     
+   -------------------------------------------- */
+#error-msg
+{
+	color:#fff;
+	background-color:red;
+	padding:10px;
+	display:none
+}
+
+.chart rect
+{
+	fill:#4682b4;
+	stroke:#fff
+}
+
+#bar-demo svg
+{
+	padding-bottom:20px
+}
+
+/* -------------------------------------------- 
+   PROGRESS BAR               
+   -------------------------------------------- */
+
+#fetching-issues h3{
+}
+
+#fetching-issues{
+  margin-bottom:15px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-moz-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-ms-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+
+.progress {
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #F7F7F7;
+  background-image: -moz-linear-gradient(top, whiteSmoke, #F9F9F9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(whiteSmoke), to(#F9F9F9));
+  background-image: -webkit-linear-gradient(top, whiteSmoke, #F9F9F9);
+  background-image: -o-linear-gradient(top, whiteSmoke, #F9F9F9);
+  background-image: linear-gradient(to bottom, whiteSmoke, #F9F9F9);
+  background-repeat: repeat-x;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+.progress .bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #333;
+  background-image: -moz-linear-gradient(top, #149BDF, #0480BE);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149BDF), to(#0480BE));
+  background-image: -webkit-linear-gradient(top, #149BDF, #0480BE);
+  background-image: -o-linear-gradient(top, #149BDF, #0480BE);
+  background-image: linear-gradient(to bottom, #149BDF, #0480BE);
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: width 0.6s ease;
+  -moz-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+
+
+.progress-striped .bar {
+  background-color: #333;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+  -moz-background-size: 40px 40px;
+  -o-background-size: 40px 40px;
+  background-size: 40px 40px;
+}
+
+
+.progress.active .bar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -moz-animation: progress-bar-stripes 2s linear infinite;
+  -ms-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}

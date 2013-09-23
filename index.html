@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Uk2group Sprint Reports</title>
+  <meta name="description" content="Reports and graphs for Uk2group redmine projects">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/reports.css">
+  <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="top-right-nav">
+    <a href="#" id="logout">logout</a><span class="seperator"> | </span>
+    <a href="#" id="planning-link">planning</a> 
+    <a href="#" id="reports-link">reports</a> 
+  </div>
+
+  <header>
+  <h1><img id="logo" src="img/uk2group1.png"> Sprint <span id="mode">Report</span></h1>
+  </header>
+
+  <section id="login-section">
+  <div id="large-cartoon">
+    <span class="bunny-copyright">copyright <a href="http://www.misterandyriley.com/">Andy Riley</a></span>
+  </div>
+  <form id="loginform" method="post" action="">
+    <input type="hidden" name="referrer" class="av-hidden" value="" id="referrer">
+    <input type="hidden" name="from" class="av-hidden" value="" id="from">
+    <input type="hidden" name="auth_token" class="av-hidden" value="" id="auth_token">
+    <input type="hidden" name="auth_system" class="av-hidden" value="" id="auth_system">
+    <fieldset>
+      <legend>Secure Login</legend>
+      <div class="error-alert">
+         Sorry, your login details were incorrect. Try again or email andy@uk2group.net.
+      </div>
+      <div class="login-field above-below15 above30 clear">
+        <label for="username" class="placeholder">Username</label>
+        <input type="text" name="username" tabindex="1" class=" av-text" value="JonathanM" id="username">
+        <!-- <a href="/login/forgot-username/" class="login-forgot-toggle show-forgot-user">I forgot</a>
+            -->
+      </div>
+      <div class="login-field above-below15">
+        <label for="password" class="placeholder ">Password</label>
+        <input type="password" name="password" tabindex="2" class=" av-password" value="uk2uk2uk2" id="password">
+      </div>
+      <input id="btn-login" type="submit" value="Log In" class="button float-left" tabindex="3" data-loading-text="please wait...">
+    </fieldset>
+  </form>
+  </section>
+
+  <section id="project-version-section" class="">
+  <select id="projects">
+    <option class='select-a-project'>Select a Project</option>
+  </select>
+  <div id="version-status">
+    Open
+  </div>
+  <div id="versions-nav">
+  </div>
+  </section>
+
+  <section id="pie-graph-section" class="report-section">
+  <div class="col-group">
+    <div>
+      <div id="pie-selectors">
+        <a id="btn-issues-by-status" href="#" class="btn-pie-chart selected" data-target="issues-by-status">issues by status</a>
+        <a id="btn-open-issues-by-tracker" href="#" class="btn-pie-chart" data-target="open-issues-by-tracker"># open by tracker</a>
+      </div>
+      <div class="pie-chart-wrapper" id="issues-by-status">
+        <div class="chart">
+        </div>
+      </div>
+      <div class="pie-chart-wrapper" id="open-issues-by-tracker">
+        <div class="chart">
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3>Burn down chart</h3>
+      <div id="paired-line-chart">
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="issues-section" class="report-section">
+    <h3>
+      <span class="issue-count"></span> issues 
+      (<span class="issue-total-points"></span> points in total)
+    </h3>
+    <table class="issues">
+      <thead>
+        <th class="issue-id">&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th class="done-ratio-bar">&nbsp;</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="planning-issues-section" class="planning-section">
+    <div id="fetching-issues">
+      <h3>fetching issues (~ 1 min wait)</h3>
+      <div class="progress progress-striped active">
+        <div class="bar" style="width: 0%"></div>
+      </div>
+    </div>
+    <div class="section-header">
+      <h3>
+        <span class="issue-count"></span> issues with comments
+      </h3>
+
+      <a href="#" id="issues-comments-expand-all">expand all</a>
+      <a href="#" id="issues-comments-collapse-all">collapse all</a>
+
+    </div>
+    <table class="issues">
+      <thead>
+        <th class="issue-id">&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th class="done-ratio-bar">&nbsp;</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="points-per-dev-section" class="report-section">
+  <h3 class="h3_Body">bar graph - developers total scrum points</h3>
+  <div id="bar-demo"></div>
+  </section>
+  <section id="no-issues-section" class="report-section">
+  <span>
+  no issues found for <span class="project-name"></span>
+  - <span class="version-name"></span>
+  </span>
+  </section>
+
+  <section id="error-section" class="report-section">
+  <span></span>
+  </section>
+
+  <div id="error-msg">
+  </div>
+  <div id="report-wrapper">
+    <div class="col">
+    </div>
+    <div class="col">
+      <h3>versions</h3>
+      <ul id="versions">
+      </ul>
+    </div>
+  </div>
+</div>
+<!--[if lt IE 7]>
+  <p class="chromeframe">
+  You are using an outdated browser.
+  <a href="http://browsehappy.com/">Upgrade your browser today</a>
+  or
+  <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
+  to better experience this site.
+  </p>
+  <![endif]-->
+<script type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/lib/jquery.base64.js"></script>
+<!-- <script src="js/backbone.js"></script>
+-->
+<script src="js/lib/jquery.tablesort.js"></script>
+<script src="js/lib/underscore.js"></script>
+<script src="js/lib/jquery.ba-bbq.js"></script>
+<script src="js/lib/moment.js"></script>
+<script src="js/lib/jquery.cookie.js"></script>
+<script src="js/lib/d3.v2.js"></script>
+
+<script src="js/reports.js"></script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
+        <script>
+var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+-->
+</body>
+</html>

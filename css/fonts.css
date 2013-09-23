@@ -1,0 +1,27 @@
+/* @license
+ * MyFonts Webfont Build ID 2310342, 2012-06-15T13:34:58-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Semplicita Pro by Canada Type
+ * URL: http://www.myfonts.com/fonts/canadatype/semplicita-pro/regular/
+ * Copyright: Copyright &#x00A9; 2011 Canada Type. Designed by Patrick Griffin &amp; Bill Troop. All rights reserved.
+ * Licensed pageviews: 100,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2310342
+ * 
+ * © 2012 Bitstream Inc
+*/
+
+ @font-face {
+  font-family: 'Semplicita Pro';
+    src: url('./../fonts/2340C6_0_0.eot');
+    src: url('./../fonts/2340C6_0_0.eot?#iefix') format('embedded-opentype'),
+      url('./../fonts/2340C6_0_0.woff') format('woff'),
+      url('./../fonts/2340C6_0_0.ttf') format('truetype');
+ }
